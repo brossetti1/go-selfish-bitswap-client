@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/ipfs/go-cid v0.3.2
-	github.com/libp2p/go-libp2p v0.24.2
+	github.com/libp2p/go-libp2p v0.23.2
 	github.com/multiformats/go-multiaddr v0.8.0
 	github.com/multiformats/go-multihash v0.2.1
 	github.com/urfave/cli/v2 v2.3.0
