@@ -1,4 +1,4 @@
-module github.com/willscott/go-selfish-bitswap-client
+module github.com/brossetti1/go-selfish-bitswap-client
 
 go 1.18
 

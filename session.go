@@ -16,7 +16,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/protocol"
 	"github.com/multiformats/go-multihash"
 
-	bitswap_message_pb "github.com/willscott/go-selfish-bitswap-client/message"
+	bitswap_message_pb "github.com/brossetti1/go-selfish-bitswap-client/message"
 )
 
 type Bitswap interface {
