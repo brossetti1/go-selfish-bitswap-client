@@ -89,9 +89,17 @@ func (s *Session) connect() {
 	go s.writeLoop(sessionCtx)
 	ctx := context.Background()
 	if s.stimeout != 0 {
-		ctx, cncl = context.WithDeadline(context.Background(), time.Now().Add(s.stimeout))
+		ctx, cncl = context.WithDeadline(ctx, time.Now().Add(s.stimeout))
 		defer cncl()
 	}
+	pi := s.Host.Peerstore().PeerInfo(s.peer)
+	s.Host.Connect(ctx, pi)
+
+	s.Host.SetStreamHandler(ProtocolBitswap, s.onStream)
+	s.Host.SetStreamHandler(ProtocolBitswapOneZero, s.onStream)
+	s.Host.SetStreamHandler(ProtocolBitswapOneOne, s.onStream)
+	s.Host.SetStreamHandler(ProtocolBitswapNoVers, s.onStream)
+
 	stream, err := s.Host.NewStream(ctx, s.peer, ProtocolBitswap, ProtocolBitswapOneZero, ProtocolBitswapOneOne, ProtocolBitswapNoVers)
 	s.connErr = err
 	s.conn = stream
