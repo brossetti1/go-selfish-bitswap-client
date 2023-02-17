@@ -3,9 +3,9 @@ package util
 import (
 	"errors"
 
+	bitswapserver "github.com/brossetti1/go-selfish-bitswap-client/server"
 	"github.com/ipfs/go-cid"
 	"github.com/multiformats/go-multicodec"
-	bitswapserver "github.com/willscott/go-selfish-bitswap-client/server"
 )
 
 var ErrNotHave = errors.New("not found")

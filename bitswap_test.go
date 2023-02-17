@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
+	bitswap "github.com/brossetti1/go-selfish-bitswap-client"
+	bitswapserver "github.com/brossetti1/go-selfish-bitswap-client/server"
+	"github.com/brossetti1/go-selfish-bitswap-client/server/util"
 	"github.com/ipfs/go-cid"
 	"github.com/libp2p/go-libp2p"
-	bitswap "github.com/willscott/go-selfish-bitswap-client"
-	bitswapserver "github.com/willscott/go-selfish-bitswap-client/server"
-	"github.com/willscott/go-selfish-bitswap-client/server/util"
 )
 
 func TestRoundtrip(t *testing.T) {

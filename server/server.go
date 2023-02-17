@@ -8,12 +8,12 @@ import (
 	"os"
 	"time"
 
+	bitswap "github.com/brossetti1/go-selfish-bitswap-client"
+	bitswap_message_pb "github.com/brossetti1/go-selfish-bitswap-client/message"
 	"github.com/ipfs/go-cid"
 	"github.com/ipfs/go-log/v2"
 	"github.com/libp2p/go-libp2p/core/host"
 	"github.com/libp2p/go-libp2p/core/network"
-	bitswap "github.com/willscott/go-selfish-bitswap-client"
-	bitswap_message_pb "github.com/willscott/go-selfish-bitswap-client/message"
 )
 
 // accept bitswap streams. return requested blocks. simple
